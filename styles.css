@@ -53,10 +53,43 @@ button {
 }
 
 .intro-section header {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 2rem 1rem;
+}
+
+.header-nav a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.header-nav a:hover {
+  text-decoration: underline;
+}
+
+.hum-menu {
+  cursor: pointer;
+  width: 45px;
+  color: #fff;
+}
+
+.mobile-menu {
+  position: absolute;
+  bottom: 82%;
+  border: 1px solid red;
+}
+
+.triangle {
+  position: absolute;
+  top: -40px;
+  right: -7px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 40px 40px;
+  border-color: transparent transparent var(--white) transparent;
 }
 
 .contact-btn {
@@ -171,9 +204,6 @@ button {
   padding: 1rem;
 }
 
-.testimonial-card {
-}
-
 .testimonial-card img {
   width: 4rem;
   border-radius: 100%;
@@ -207,10 +237,20 @@ button {
   text-align: center;
 }
 
+.page-footer .logo {
+  filter: invert(26%) sepia(17%) saturate(1099%) hue-rotate(116deg)
+    brightness(105%) contrast(95%);
+}
+
 .page-footer nav {
   display: flex;
   justify-content: space-around;
   margin: 1rem 0;
+}
+
+.page-footer a {
+  color: var(--dark-desaturated-cyan);
+  text-decoration: none;
 }
 
 .social-icons {
@@ -228,15 +268,6 @@ button {
     align-items: center;
     gap: 2rem;
     margin-right: 2rem;
-  }
-
-  .header-nav a {
-    text-decoration: none;
-    color: var(--white);
-  }
-
-  .header-nav a:hover {
-    text-decoration: underline;
   }
 
   .intro-section {
@@ -280,6 +311,33 @@ button {
   .page-footer nav {
     justify-content: center;
     gap: 4rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .header-nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    /* padding: 2rem; */
+    width: 90%;
+    text-align: center;
+    background-color: var(--white);
+  }
+
+  .header-nav * {
+    margin: 0.5rem;
+  }
+
+  .header-nav a {
+    color: var(--very-dark-grayish-blue);
+  }
+
+  .contact-btn {
+    background-color: var(--yellow);
   }
 }
 
