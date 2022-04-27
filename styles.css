@@ -25,6 +25,7 @@ body {
   height: 100vh;
   font-size: 18px;
   font-family: "Barlow", sans-serif;
+  overflow-x: hidden;
 }
 
 img {
@@ -121,6 +122,10 @@ button {
   width: 10rem;
 }
 
+.intro-section .logo {
+  margin-left: 1rem;
+}
+
 .main-section {
   display: grid;
   grid-template-columns: 1fr;
@@ -165,12 +170,6 @@ button {
 
 .bg-img-box {
   position: relative;
-}
-
-.bg-img-box img {
-  /* position: absolute;
-  top: 0;
-  bottom: 0; */
 }
 
 .image-text-container {
@@ -233,7 +232,7 @@ button {
 
 .page-footer {
   padding: 2rem 1rem;
-  background-color: var(--dark-moderate-cyan);
+  background-color: #68b1a2;
   text-align: center;
 }
 
